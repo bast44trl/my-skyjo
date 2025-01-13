@@ -1,0 +1,42 @@
+@use '../../assets/styles/variables.scss' as *;
+
+@mixin backCard() {
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Abril Fatface', serif;
+  margin: 10px;
+  padding: 0px;
+  overflow: hidden;
+  color: #0000006d;
+  cursor: pointer; /* 
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: #000 3px 3px 10px;
+  } */
+}
+.backCard {
+  @include backCard();
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-size: cover;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 89%;
+  height: 93%;
+  border: #fff ($card-height * 0.035) solid;
+}

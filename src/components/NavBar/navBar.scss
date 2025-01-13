@@ -1,0 +1,47 @@
+@use '../../assets/styles/variables.scss' as *;
+
+.navbar-container {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 50%;
+  height: 6vh;
+  background-color: #505050;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  list-style-type: none;
+  margin: 2vh auto;
+  padding: 0;
+  box-shadow: 0 0 5px 0 #000;
+  overflow: hidden;
+  position: sticky;
+
+  .navbar-links {
+    flex-grow: 1;
+    height: 100%;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #000;
+      cursor: pointer;
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+}

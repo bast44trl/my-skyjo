@@ -1,0 +1,36 @@
+@use '../../../assets/styles/variables.scss' as *;
+
+.home-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  h1 {
+    @include title-font();
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+    margin: 0;
+  }
+  img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 #000;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 1.5rem;
+    background-color: #505050;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 #000;
+  }
+}

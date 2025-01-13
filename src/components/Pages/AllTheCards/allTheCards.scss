@@ -1,0 +1,54 @@
+@use '../../../assets/styles/variables.scss' as *;
+
+$quantity-div-position: $card-height * -0.2;
+$quantity-div-size: $card-height * 0.4;
+
+.all-the-cards {
+  width: 100%;
+  padding-bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    @include title-font();
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+    margin: 50px 0;
+  }
+  &-display {
+    width: $card-height * 4.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    &-card-container {
+      width: fit-content;
+      display: flex;
+      box-shadow: #000 3px 3px 10px;
+      border-radius: 1vw;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 5% 7% 7% 5%;
+      margin: 5% 1%;
+      background-color: rgba(255, 255, 255, 0.6);
+      position: relative;
+      &-quantity {
+        position: absolute;
+        top: $quantity-div-position;
+        right: $quantity-div-position;
+        height: $quantity-div-size;
+        width: $quantity-div-size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        clip-path: circle(50%);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: x-large;
+      }
+    }
+  }
+}
