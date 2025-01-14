@@ -11,14 +11,7 @@
   padding: 0px;
   overflow: hidden;
   color: #000;
-  cursor: pointer; /* 
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
-  &:hover {
-    transform: scale(1.02);
-    box-shadow: #000 3px 3px 10px; 
-  } */
+  cursor: pointer;
 }
 @mixin header-footer() {
   height: 16%;
@@ -29,6 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 @mixin frontCard-corner() {
   height: 100%;
@@ -62,6 +56,7 @@
     height: 69%;
     width: 100%;
     margin-bottom: $card-height * -0.11;
+    z-index: 1;
   }
 
   &-footer {
@@ -76,18 +71,17 @@
     height: 100%;
     width: 100%;
     position: relative;
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 89%;
+    width: 90%;
     height: 93%;
     border: #fff ($card-height * 0.035) solid;
+    background-size: contain;
   }
-}
-
-.selected {
-  box-shadow: 10px 10px 10px rgb(255, 43, 43);
 }

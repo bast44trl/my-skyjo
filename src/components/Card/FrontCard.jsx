@@ -7,15 +7,15 @@ const FrontCard = ({ card_num, flipped, onDiscardPile = false }) => {
   const [underlined, setUnderlined] = useState(false);
   const bgColor = (card_num) => {
     if (card_num < 0) {
-      return 'blue';
+      return '#330099';
     } else if (card_num == 0) {
-      return 'cyan';
+      return '#66ccff';
     } else if (card_num <= 4) {
-      return 'green';
+      return '#00cc33';
     } else if (card_num <= 8) {
-      return 'yellow';
+      return '#FFFF00';
     } else if (card_num <= 12) {
-      return 'red';
+      return '#FF0033';
     }
   };
 
@@ -28,13 +28,12 @@ const FrontCard = ({ card_num, flipped, onDiscardPile = false }) => {
       className="frontCard"
       style={{
         backgroundColor: bgColor(card_num),
-        backgroundImage: `radial-gradient(circle,rgb(197, 199, 205), ${bgColor(card_num)})`,
+        backgroundImage: `radial-gradient(circle,rgb(255, 255, 255) 1%, ${bgColor(card_num)})`,
         textDecoration: underlined ? 'underline' : 'none',
         transform: `${onDiscardPile ? '' : 'rotateY(180deg)'} ${flipped ? 'translateX(20px)' : ''}`,
       }}
     >
       <div className="container">
-        <div className="overlay" style={{ background: `url(${overlay})` }}></div>
         <div className="frontCard-header">
           <div className="frontCard-header-left">{card_num}</div>
         </div>
@@ -42,6 +41,7 @@ const FrontCard = ({ card_num, flipped, onDiscardPile = false }) => {
         <div className="frontCard-footer">
           <div className="frontCard-footer-left">{card_num}</div>
         </div>{' '}
+        <div className="overlay" style={{ backgroundImage: `url(${overlay})` }}></div>{' '}
       </div>
     </button>
   );

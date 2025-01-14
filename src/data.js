@@ -18,7 +18,7 @@ export const cards = [
 
 let allCardsPile = [];
 function mainPile(allCards) {
-  allCards.forEach((card, index) => {
+  allCards.forEach((card) => {
     for (let i = 0; i < card.quantity; i++) {
       allCardsPile.push(card);
     }

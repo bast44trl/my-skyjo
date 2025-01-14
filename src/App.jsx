@@ -11,7 +11,7 @@ const App = () => {
     <div className="app">
       <NavBar />
       <Routes>
-        <Route path="*" element={<Home />} />
+        <Route path="home" element={<Home />} />
         <Route path="allthecards" element={<AllTheCards />} />
         <Route path="boardgame" element={<BoardGame />} />
       </Routes>
